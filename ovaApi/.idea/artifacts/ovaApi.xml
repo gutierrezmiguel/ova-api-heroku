@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="ovaApi">
+    <output-path>$PROJECT_DIR$/out/artifacts/ovaApi</output-path>
+    <root id="archive" name="ovaApi.war" />
+  </artifact>
+</component>

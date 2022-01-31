@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ovaApi.main:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/ovaApi_main_war</output-path>
+    <root id="archive" name="ovaApi.war">
+      <element id="artifact" artifact-name="ovaApi.main:war exploded" />
+    </root>
+  </artifact>
+</component>
