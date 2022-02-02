@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -50,4 +51,15 @@ public class UserController {
         }
         return  new ResponseEntity<>(userByPassword.get(),HttpStatus.OK);
     }
+
+    @GetMapping(path = "/all")
+    public ResponseEntity<List<User>> getAllUsers(){
+        List<User> userList = userService.getAllUsers();
+        if(userList.isEmpty()){
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }else{
+            return new ResponseEntity<>(userList,HttpStatus.OK);
+        }
+    }
+
 }
